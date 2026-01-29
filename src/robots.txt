@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+# Bloqueie rotas privadas/logadas
+Disallow: /admin/
+Disallow: /dashboard/
+
+# Indique onde esta seu sitemap
+Sitemap: https://guiadosgadgets.vercel.app/sitemap.xml
