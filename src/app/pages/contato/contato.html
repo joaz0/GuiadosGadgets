@@ -1,14 +1,99 @@
 <section class="page">
   <header class="page__header">
-    <p class="page__eyebrow">Contato</p>
-    <h1>Fale com o Guia dos Gadgets</h1>
+    <p class="page__eyebrow">Fale Conosco</p>
+    <h1>Canais de Comunicação</h1>
+    <p class="lead">
+      Tem uma sugestão de pauta, encontrou um erro nos dados ou quer propor uma parceria?
+      A linha direta com a engenharia do <em>Guia dos Gadgets</em> está aberta.
+    </p>
   </header>
-  <div class="page__content">
-    <p>
-      Em breve um formulario simples para parcerias, duvidas e sugestoes.
-    </p>
-    <p>
-      Por enquanto, adicione aqui seus canais oficiais de contato.
-    </p>
+
+  <div class="page__content contact-layout">
+    <div class="contact-info">
+      <div class="contact-illustration">
+        <svg
+          width="100%"
+          height="auto"
+          viewBox="0 0 400 200"
+          xmlns="http://www.w3.org/2000/svg"
+          aria-labelledby="contactSvgTitle"
+          role="img"
+        >
+          <title id="contactSvgTitle">Fluxo de Comunicação Guia dos Gadgets</title>
+          <circle cx="50" cy="100" r="8" fill="#ced4da" />
+          <circle cx="350" cy="100" r="8" fill="#007bff" />
+          <line x1="58" y1="100" x2="342" y2="100" stroke="#dee2e6" stroke-width="2" stroke-dasharray="5,5" />
+
+          <circle cx="200" cy="100" r="30" fill="none" stroke="#28a745" stroke-width="2">
+            <animate attributeName="r" from="20" to="40" dur="2s" repeatCount="indefinite" />
+            <animate attributeName="opacity" from="1" to="0" dur="2s" repeatCount="indefinite" />
+          </circle>
+          <circle cx="200" cy="100" r="10" fill="#28a745" />
+
+          <rect x="180" y="150" width="40" height="4" fill="#343a40" rx="2" />
+          <text x="200" y="170" text-anchor="middle" font-family="monospace" font-size="10" fill="#6c757d">
+            STATUS: ONLINE
+          </text>
+        </svg>
+      </div>
+
+      <div class="contact-channels">
+        <h3>📩 E-mail Direto</h3>
+        <p>
+          Para dúvidas técnicas ou sugestões de review:<br />
+          <a href="mailto:contato@guiadosgadgets.com.br" class="contact-link">
+            contato@guiadosgadgets.com.br
+          </a>
+        </p>
+
+        <h3>🤝 Parcerias Comerciais</h3>
+        <p class="note">
+          <strong>Aviso aos anunciantes:</strong> Nós mantemos total independência editorial.
+          Enviem produtos para teste sabendo que o review será baseado em dados e uso real,
+          apontando tanto os prós quanto os contras.
+        </p>
+      </div>
+
+      <div class="social-links">
+        <h3>Redes Sociais</h3>
+        <ul>
+          <li><a href="#" target="_blank" rel="noopener noreferrer">LinkedIn (Joaz)</a></li>
+          <li><a href="#" target="_blank" rel="noopener noreferrer">GitHub (Projeto)</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="contact-form-wrapper">
+      <form class="tech-form">
+        <div class="form-group">
+          <label for="name">ID / Nome</label>
+          <input type="text" id="name" placeholder="Como devemos te chamar?" required />
+        </div>
+
+        <div class="form-group">
+          <label for="email">Protocolo de Retorno (E-mail)</label>
+          <input type="email" id="email" placeholder="seu@email.com" required />
+        </div>
+
+        <div class="form-group">
+          <label for="subject">Assunto</label>
+          <select id="subject">
+            <option value="duvida">Dúvida Técnica</option>
+            <option value="sugestao">Sugestão de Review</option>
+            <option value="erro">Reportar Erro no Site</option>
+            <option value="comercial">Comercial / Parceria</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="message">Mensagem (Input de Dados)</label>
+          <textarea id="message" rows="5" placeholder="Digite sua mensagem aqui..." required></textarea>
+        </div>
+
+        <button type="submit" class="btn-submit">
+          Enviar Dados <span>&rarr;</span>
+        </button>
+      </form>
+    </div>
   </div>
 </section>

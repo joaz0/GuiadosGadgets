@@ -1,0 +1,120 @@
+.contact-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+}
+
+@media (min-width: 768px) {
+  .contact-layout {
+    grid-template-columns: 1fr 1.2fr;
+  }
+}
+
+.contact-info {
+  display: grid;
+  gap: 2rem;
+}
+
+.contact-illustration {
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 1.5rem;
+  background: var(--surface);
+}
+
+.contact-channels h3,
+.social-links h3 {
+  margin: 0 0 0.5rem;
+  color: var(--ink);
+}
+
+.contact-link {
+  color: var(--accent);
+  font-weight: 700;
+  text-decoration: none;
+  font-size: 1.05rem;
+}
+
+.contact-link:hover {
+  text-decoration: underline;
+}
+
+.note {
+  background: var(--surface);
+  border-left: 4px solid var(--accent);
+  padding: 1rem;
+  font-size: 0.9rem;
+  color: var(--ink);
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+}
+
+.social-links ul {
+  margin: 0;
+  padding-left: 1.2rem;
+  display: grid;
+  gap: 0.4rem;
+}
+
+.contact-form-wrapper {
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.92);
+  box-shadow: var(--shadow);
+  color: var(--ink);
+}
+
+.tech-form .form-group {
+  margin-bottom: 1.5rem;
+}
+
+.tech-form label {
+  display: block;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono',
+    'Courier New', monospace;
+  color: var(--ink);
+}
+
+.tech-form input,
+.tech-form select,
+.tech-form textarea {
+  width: 100%;
+  padding: 0.85rem 1rem;
+  border: 2px solid var(--line);
+  border-radius: 10px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  font-family: var(--font-body);
+  color: var(--ink);
+  background: #fff;
+}
+
+.tech-form input:focus,
+.tech-form select:focus,
+.tech-form textarea:focus {
+  border-color: var(--accent);
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.2);
+}
+
+.btn-submit {
+  background: var(--accent);
+  color: var(--accent-ink);
+  border: none;
+  padding: 0.9rem 2rem;
+  font-weight: 700;
+  cursor: pointer;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  box-shadow: 0 12px 24px rgba(124, 58, 237, 0.25);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-submit:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 16px 28px rgba(124, 58, 237, 0.35);
+}
