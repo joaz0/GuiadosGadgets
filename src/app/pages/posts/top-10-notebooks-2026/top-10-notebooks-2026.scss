@@ -1,0 +1,152 @@
+.post-page {
+  padding-bottom: 3rem;
+}
+
+.post {
+  display: grid;
+  gap: 2rem;
+}
+
+.post__header {
+  display: grid;
+  gap: 1rem;
+}
+
+.post__eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.25em;
+  font-size: 0.7rem;
+  color: var(--accent-2);
+  margin: 0;
+}
+
+.post__lead {
+  font-size: 1.1rem;
+  margin: 0;
+  color: var(--text);
+}
+
+.post__section {
+  display: grid;
+  gap: 1rem;
+}
+
+.post__section h2 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: var(--ink);
+}
+
+.post__snippet {
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 1.25rem;
+  background: rgba(124, 58, 237, 0.08);
+}
+
+.post__snippet-label {
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-size: 0.65rem;
+  color: var(--muted);
+  margin: 0 0 0.5rem;
+}
+
+.table-wrap {
+  overflow-x: auto;
+  border-radius: 16px;
+  border: 1px solid var(--line);
+  background: white;
+}
+
+.table-wrap table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 640px;
+}
+
+.table-wrap th,
+.table-wrap td {
+  padding: 0.85rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid var(--line);
+}
+
+.table-wrap thead {
+  background: rgba(124, 58, 237, 0.12);
+  color: var(--ink);
+}
+
+.post__note {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.model-card {
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 1.25rem;
+  background: rgba(255, 255, 255, 0.9);
+  display: grid;
+  gap: 0.75rem;
+}
+
+.model-card h3 {
+  margin: 0;
+}
+
+.model-card ul {
+  margin: 0;
+  padding-left: 1.1rem;
+  display: grid;
+  gap: 0.4rem;
+  color: var(--text);
+}
+
+.model-card strong {
+  color: var(--ink);
+}
+
+.affiliate-button {
+  justify-self: start;
+  text-decoration: none;
+  color: var(--accent-ink);
+  background: var(--accent);
+  padding: 0.6rem 1.4rem;
+  border-radius: 999px;
+  font-weight: 600;
+  box-shadow: 0 12px 24px rgba(124, 58, 237, 0.25);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.affiliate-button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 16px 28px rgba(124, 58, 237, 0.35);
+}
+
+.post__callout {
+  border-left: 3px solid var(--accent);
+  padding-left: 1rem;
+  background: rgba(124, 58, 237, 0.08);
+  border-radius: 12px;
+  padding-block: 1rem;
+  padding-right: 1rem;
+}
+
+.post__callout ul {
+  margin: 0;
+  padding-left: 1.2rem;
+  display: grid;
+  gap: 0.5rem;
+}
+
+@media (max-width: 720px) {
+  .post__section h2 {
+    font-size: 1.3rem;
+  }
+
+  .table-wrap table {
+    min-width: 520px;
+  }
+}

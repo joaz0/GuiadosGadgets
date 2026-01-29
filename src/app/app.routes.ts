@@ -40,6 +40,17 @@ export const routes: Routes = [
     data: { description: 'Reviews detalhadas de produtos com foco em custo-beneficio.' }
   },
   {
+    path: 'reviews/top-10-notebooks-2026',
+    loadComponent: () =>
+      import('./pages/posts/top-10-notebooks-2026/top-10-notebooks-2026').then(
+        (m) => m.Top10Notebooks2026Component
+      ),
+    title: 'Top 10 Notebooks 2026',
+    data: {
+      description: 'Top 10 melhores notebooks para comprar em 2026 com dados do BenchPromos.'
+    }
+  },
+  {
     path: 'comparacoes',
     loadComponent: () =>
       import('./pages/comparacoes/comparacoes').then((m) => m.ComparacoesComponent),
