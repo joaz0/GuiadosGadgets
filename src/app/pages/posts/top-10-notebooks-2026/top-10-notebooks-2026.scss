@@ -99,6 +99,52 @@
   color: var(--ink);
 }
 
+.divider {
+  border: none;
+  border-top: 1px solid var(--line);
+  margin: 0;
+}
+
+.final-cta {
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  padding: 1.75rem;
+  background: rgba(124, 58, 237, 0.12);
+  display: grid;
+  gap: 0.75rem;
+  text-align: center;
+}
+
+.final-cta h3 {
+  margin: 0;
+  color: var(--ink);
+}
+
+.btn-mega {
+  justify-self: center;
+  text-decoration: none;
+  color: var(--accent-ink);
+  background: var(--accent);
+  padding: 0.85rem 1.8rem;
+  border-radius: 999px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  box-shadow: 0 12px 24px rgba(124, 58, 237, 0.3);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-mega:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 16px 28px rgba(124, 58, 237, 0.4);
+}
+
+.disclaimer {
+  margin: 0;
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
 .table-wrap {
   overflow-x: auto;
   border-radius: 16px;

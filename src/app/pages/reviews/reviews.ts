@@ -76,6 +76,18 @@ export class ReviewsComponent {
       summary: 'A ergonomia é perfeita, mas a bateria poderia durar mais.',
       date: '15 Jan 2026',
       link: '/reviews'
+    },
+    {
+      id: 6,
+      title: 'Os 10 Melhores Celulares de 2026: Do Barato ao Topo de Linha',
+      category: 'Smartphones',
+      image: 'assets/images/smartphones-2026.jpg',
+      rating: 9.6,
+      summary:
+        'iPhone 17, S26 Ultra ou o rei do custo-beneficio da Motorola? Testamos os principais lancamentos do ano.',
+      badge: 'Guia Atualizado',
+      date: '02 Feb 2026',
+      link: '/reviews/top-10-celulares-2026'
     }
   ];
 

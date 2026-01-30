@@ -51,6 +51,17 @@ export const routes: Routes = [
     }
   },
   {
+    path: 'reviews/top-10-celulares-2026',
+    loadComponent: () =>
+      import('./pages/posts/top-10-celulares-2026/top-10-celulares-2026').then(
+        (m) => m.Top10Celulares2026Component
+      ),
+    title: 'Top 10 Celulares 2026',
+    data: {
+      description: 'Top 10 melhores celulares para comprar em 2026 com foco em custo-beneficio.'
+    }
+  },
+  {
     path: 'comparacoes',
     loadComponent: () =>
       import('./pages/comparacoes/comparacoes').then((m) => m.ComparacoesComponent),
