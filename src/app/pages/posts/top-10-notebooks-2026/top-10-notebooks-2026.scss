@@ -52,6 +52,53 @@
   margin: 0 0 0.5rem;
 }
 
+.quick-summary {
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 1.5rem;
+  background: rgba(124, 58, 237, 0.12);
+  display: grid;
+  gap: 1rem;
+}
+
+.quick-summary__list {
+  margin: 0;
+  padding-left: 1.2rem;
+  display: grid;
+  gap: 0.6rem;
+  color: var(--text);
+}
+
+.quick-summary__list strong {
+  color: var(--ink);
+}
+
+.compare-block {
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 1.25rem;
+  background: var(--surface-2);
+  display: grid;
+  gap: 0.75rem;
+}
+
+.compare-block h3 {
+  margin: 0;
+  color: var(--ink);
+}
+
+.compare-block ul {
+  margin: 0;
+  padding-left: 1.1rem;
+  display: grid;
+  gap: 0.5rem;
+  color: var(--text);
+}
+
+.compare-block strong {
+  color: var(--ink);
+}
+
 .table-wrap {
   overflow-x: auto;
   border-radius: 16px;

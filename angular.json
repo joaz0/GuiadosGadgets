@@ -28,6 +28,7 @@
                 "glob": "**/*",
                 "input": "public"
               },
+              "src/assets",
               "src/robots.txt"
             ],
             "styles": [

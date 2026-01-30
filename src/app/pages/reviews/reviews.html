@@ -1,19 +1,65 @@
 <section class="page reviews-page">
   <header class="page__header">
-    <p class="page__eyebrow">Reviews</p>
-    <h1>Reviews e guias completos</h1>
+    <p class="page__eyebrow">Análises Técnicas</p>
+    <h1>Nossos Reviews</h1>
+    <p class="lead">
+      Testes imparciais baseados em dados, uso real e engenharia de produto.
+      Aqui, a nota 10 é quase impossível.
+    </p>
   </header>
-  <div class="page__content reviews-list">
-    <article class="review-card">
-      <div>
-        <p class="review-card__eyebrow">Guia de compra 2026</p>
-        <h2>Top 10 Melhores Notebooks para Comprar em 2026</h2>
-        <p>
-          Lista atualizada com custo-beneficio, gamers e modelos premium com dados do
-          BenchPromos.
-        </p>
+
+  <div class="page__content">
+    <article class="featured-review">
+      <div class="featured-media">
+        <span class="badge badge--highlight" *ngIf="featuredReview.badge">{{ featuredReview.badge }}</span>
+        <img
+          [src]="featuredReview.image"
+          [attr.alt]="featuredReview.title"
+          loading="lazy"
+          decoding="async"
+        />
       </div>
-      <a class="review-card__link" routerLink="/reviews/top-10-notebooks-2026">Ler guia</a>
+      <div class="featured-content">
+        <div class="meta">
+          <span class="category">{{ featuredReview.category }}</span>
+          <span class="date">{{ featuredReview.date }}</span>
+        </div>
+        <h2>{{ featuredReview.title }}</h2>
+        <p>{{ featuredReview.summary }}</p>
+
+        <div class="review-footer">
+          <div class="rating-box">
+            <span class="rating-value">{{ featuredReview.rating }}</span>
+            <span class="rating-label">/10</span>
+          </div>
+          <a class="btn-read" [routerLink]="featuredReview.link">Ler Análise Completa &rarr;</a>
+        </div>
+      </div>
     </article>
+
+    <div class="reviews-grid">
+      <article class="review-card" *ngFor="let review of reviews; trackBy: trackById">
+        <div class="card-image">
+          <span class="badge" *ngIf="review.badge">{{ review.badge }}</span>
+          <img [src]="review.image" [attr.alt]="review.title" loading="lazy" decoding="async" />
+        </div>
+        <div class="card-content">
+          <span class="category">{{ review.category }}</span>
+          <h3>{{ review.title }}</h3>
+          <p>{{ review.summary }}</p>
+          <div class="card-footer">
+            <div class="mini-rating">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="#fbbf24" aria-hidden="true">
+                <path
+                  d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                />
+              </svg>
+              <strong>{{ review.rating }}</strong>
+            </div>
+            <a class="link-read" [routerLink]="review.link">Ver review</a>
+          </div>
+        </div>
+      </article>
+    </div>
   </div>
 </section>
