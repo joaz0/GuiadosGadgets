@@ -72,5 +72,166 @@
         </p>
       </div>
     </div>
+
+    <section class="about-docs">
+      <h2>Especificacao tecnica: analise de razao de valor (custo-beneficio) v2.0</h2>
+      <p>
+        Documento revisado em janeiro de 2026 para padronizar a avaliacao de custo x beneficio em hardware
+        e eletronicos de consumo.
+      </p>
+
+      <h3>1. Definicao do problema</h3>
+      <p>
+        A relacao entre preco e desempenho nao e linear. O objetivo e encontrar o ponto de eficiencia de
+        Pareto, evitando retornos decrescentes, falsa economia e obsolescencia prematura.
+      </p>
+
+      <h3>2. Metodologia de avaliacao (algoritmo de valor)</h3>
+      <p>
+        IV = ((P * Wp) + (D * Wd) + (R * Wr)) / (C_total * (1 + O))
+      </p>
+      <ul>
+        <li><strong>P (Performance):</strong> benchmark normalizado (0-100).</li>
+        <li><strong>D (Durabilidade):</strong> suporte + construcao (0-100).</li>
+        <li><strong>R (Recursos):</strong> tela, bateria, ecossistema (0-100).</li>
+        <li><strong>C_total:</strong> preco de compra - valor residual de revenda.</li>
+        <li><strong>O (Obsolescencia):</strong> 0 a 0.3 conforme ciclo do produto.</li>
+        <li><strong>Wp/Wd/Wr:</strong> pesos dinamicos por perfil de uso.</li>
+      </ul>
+
+      <h3>2.2 Perfis de uso (pesos dinamicos)</h3>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Perfil</th>
+              <th>Wp</th>
+              <th>Wd</th>
+              <th>Wr</th>
+              <th>Uso tipico</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Gamer</td>
+              <td>0.60</td>
+              <td>0.20</td>
+              <td>0.20</td>
+              <td>Gaming competitivo, streaming</td>
+            </tr>
+            <tr>
+              <td>Criador de conteudo</td>
+              <td>0.50</td>
+              <td>0.30</td>
+              <td>0.20</td>
+              <td>Video, renderizacao 3D</td>
+            </tr>
+            <tr>
+              <td>Produtividade</td>
+              <td>0.30</td>
+              <td>0.50</td>
+              <td>0.20</td>
+              <td>Escritorio, desenvolvimento leve</td>
+            </tr>
+            <tr>
+              <td>Casual/estudante</td>
+              <td>0.20</td>
+              <td>0.40</td>
+              <td>0.40</td>
+              <td>Midia, estudos</td>
+            </tr>
+            <tr>
+              <td>Corporativo</td>
+              <td>0.25</td>
+              <td>0.60</td>
+              <td>0.15</td>
+              <td>Trabalho remoto, videoconferencia</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>3. Criterios tecnicos (quantificacao objetiva)</h3>
+      <ul>
+        <li><strong>Performance:</strong> benchmark / score referencia * 100, com penalizacoes.</li>
+        <li><strong>Penalizacoes:</strong> -20 eMMC, -15 LPDDR4X/DDR4, -10 processo >7nm.</li>
+        <li><strong>Benchmarks referencia:</strong> AnTuTu 1.500.000; Cinebench R23 30.000; Time Spy 20.000; CrystalDisk 7.000 MB/s.</li>
+      </ul>
+
+      <h3>3.2 Custo total (C_total)</h3>
+      <p>
+        C_total = P_compra - (P_compra * R_revenda * (1 - D_ano)^T)
+      </p>
+      <ul>
+        <li><strong>P_compra:</strong> preco atual.</li>
+        <li><strong>R_revenda:</strong> taxa de retencao.</li>
+        <li><strong>D_ano:</strong> depreciacao anual.</li>
+        <li><strong>T:</strong> tempo de uso (anos).</li>
+      </ul>
+
+      <h3>3.3 Durabilidade (D)</h3>
+      <p>
+        D = (S_software * 0.5) + (Q_construcao * 0.3) + (R_reparabilidade * 0.2)
+      </p>
+      <ul>
+        <li><strong>Suporte:</strong> +10 por ano, max 5 anos.</li>
+        <li><strong>Construcao:</strong> IP68, Gorilla Glass, metal/fibra.</li>
+        <li><strong>Reparabilidade:</strong> iFixit 1-10 convertido para 0-20.</li>
+      </ul>
+
+      <h3>3.4 Recursos (R)</h3>
+      <ul>
+        <li><strong>Tela:</strong> OLED/AMOLED, 120Hz, HDR10+.</li>
+        <li><strong>Bateria:</strong> 5000mAh+, carga 65W+, wireless.</li>
+        <li><strong>Conectividade:</strong> 5G, Wi-Fi 6E/7, USB4/Thunderbolt.</li>
+        <li><strong>Ecossistema:</strong> integracao nativa.</li>
+      </ul>
+
+      <h3>3.5 Obsolescencia (O)</h3>
+      <ul>
+        <li><strong>0.0:</strong> lancamento recente (menos de 3 meses).</li>
+        <li><strong>0.1:</strong> metade do ciclo.</li>
+        <li><strong>0.25:</strong> proximo ao refresh.</li>
+        <li><strong>0.05:</strong> geracao anterior (sweet spot).</li>
+      </ul>
+
+      <h3>4. Matriz de classificacao (exemplo)</h3>
+      <p>
+        Perfil: produtividade (Wp 0.30, Wd 0.50, Wr 0.20). O dispositivo intermediario premium vence
+        quando entrega 80% da performance por 1/3 do custo.
+      </p>
+
+      <h3>5. Checklist de selecao</h3>
+      <ul>
+        <li><strong>Regra do gargalo:</strong> CPU forte + armazenamento fraco = rejeitar.</li>
+        <li><strong>Regra da revenda:</strong> sem mercado ativo, custo real sobe.</li>
+        <li><strong>Regra do sweet spot:</strong> geracao -1 oferece melhor IV.</li>
+        <li><strong>Regra do timing:</strong> menos de 3 meses para refresh? esperar.</li>
+      </ul>
+
+      <h3>6. Ferramenta de implementacao</h3>
+      <p>Script Python para calculo automatizado do IV (ver repositorio).</p>
+
+      <h3>7. Casos especiais</h3>
+      <ul>
+        <li><strong>Produtos de nicho:</strong> IV_especializado = IV_base * (1 + E).</li>
+        <li><strong>Comparacoes entre categorias:</strong> usar IV por ano de uso.</li>
+      </ul>
+
+      <h3>8. Recomendacoes</h3>
+      <ul>
+        <li>Alvo primario: flagship killer ou intermediario premium.</li>
+        <li>Timing ideal: 6-8 meses apos lancamento ou geracao anterior com desconto.</li>
+        <li>Evitar componentes legados e marcas sem revenda.</li>
+      </ul>
+
+      <h3>9. Limitacoes</h3>
+      <ul>
+        <li>Subjetividade residual em tela/audio.</li>
+        <li>Volatilidade de preco por regiao e promocoes.</li>
+        <li>Entusiastas podem justificar IV baixo.</li>
+        <li>Benchmarks precisam de atualizacao trimestral.</li>
+      </ul>
+    </section>
   </div>
 </section>

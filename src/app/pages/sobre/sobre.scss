@@ -1,0 +1,59 @@
+.about-grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.text-block h2 {
+  margin: 0 0 1rem;
+  color: var(--ink);
+}
+
+.chart-block {
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 1.5rem;
+  background: var(--surface-2);
+  display: grid;
+  gap: 1rem;
+}
+
+.chart-block h3 {
+  margin: 0;
+  color: var(--ink);
+}
+
+.about-docs {
+  margin-top: 2.5rem;
+  display: grid;
+  gap: 1.5rem;
+}
+
+.about-docs h2,
+.about-docs h3 {
+  margin: 0;
+  color: var(--ink);
+}
+
+.about-docs ul {
+  margin: 0;
+  padding-left: 1.2rem;
+  display: grid;
+  gap: 0.5rem;
+  color: var(--text);
+}
+
+.about-docs strong {
+  color: var(--ink);
+}
+
+.docs-grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+.docs-grid h4 {
+  margin: 0 0 0.5rem;
+  color: var(--ink);
+}

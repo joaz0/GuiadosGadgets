@@ -24,11 +24,11 @@ interface Review {
 export class ReviewsComponent {
   featuredReview: Review = {
     id: 1,
-    title: 'Top 10 Melhores Notebooks para Comprar em 2026',
+    title: 'Top 10 Melhores Notebooks Disponiveis Agora (2025/2026)',
     category: 'Computadores',
     image: 'assets/images/LenovoLOQ.png',
     rating: 9.8,
-    summary: 'Analisamos 45 modelos com dados do BenchPromos. O vencedor vai te surpreender pelo preço.',
+    summary: 'Ranking atualizado com metodologia de custo x beneficio, focado em modelos ja disponiveis.',
     badge: 'Guia Definitivo',
     date: '29 Jan 2026',
     link: '/reviews/top-10-notebooks-2026'
@@ -79,12 +79,12 @@ export class ReviewsComponent {
     },
     {
       id: 6,
-      title: 'Os 10 Melhores Celulares de 2026: Do Barato ao Topo de Linha',
+      title: 'Top 10 Celulares de 2025: Lancamentos Disponiveis Agora',
       category: 'Smartphones',
       image: 'assets/images/smartphones-2026.jpg',
       rating: 9.6,
       summary:
-        'iPhone 17, S26 Ultra ou o rei do custo-beneficio da Motorola? Testamos os principais lancamentos do ano.',
+        'Os lancamentos confirmados de 2025 que ja estao disponiveis: dos flagships aos melhores custo-beneficio.',
       badge: 'Guia Atualizado',
       date: '02 Feb 2026',
       link: '/reviews/top-10-celulares-2026'
